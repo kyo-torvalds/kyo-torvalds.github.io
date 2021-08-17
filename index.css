@@ -3,6 +3,7 @@
   outline: 0;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   -webkit-tap-highlight-color: rbga(0, 0, 0, 0);
 }
 
@@ -22,6 +23,7 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 0;
 }
 .in_canvas {
   position: absolute;
@@ -56,7 +58,12 @@ a {
   font-family: "Press Start 2P", cursive;
   color: rgb(48, 40, 53);
   text-shadow: 4px 4px 4px #aaa;
+  animation-name: slideon;
+  animation-duration: 1s;
 }
+
+
+
 
 @media screen and (max-width: 768px) {
   .title {
@@ -75,6 +82,9 @@ a {
 }
 
 .wrapper {
+  z-index: 11;
+  animation-name: slideright;
+  animation-duration: 1s;
   position: absolute;
   left: 25px;
   top: 25px;
@@ -84,7 +94,9 @@ a {
 }
 
 .hamburger-menu-button {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top:0;
   width: var(--width);
   height: var(--width);
   display: flex;
@@ -120,9 +132,102 @@ a {
 .open {
   transform: translateY(0px) rotate(45deg);
   /* open에도 transition이 적용된다. */
+  background-color: white
 }
 
 .open::after {
   width: calc(0.75 * var(--width));
   transform: translateY(0px) rotate(90deg);
+  background-color: white
 }
+
+.navigator{
+  height:100%;
+  z-index: 1;
+  
+ width: 100%;
+}
+
+.none{
+  display:none
+}
+.menu_item{
+  height: 100px;
+  width: 100%;
+  max-width: 30rem;
+  
+  margin: 0;
+  display: flex; 
+  text-align: center;
+  align-items: center;
+  flex-direction: center;
+  width: 100%;
+  transition: ease-in;
+
+}
+
+.menu_item a{
+  width: 100%;
+  color: white;
+  font-size: 4rem;
+}
+
+.menu_item:hover{
+  border-bottom: 2px solid rgba(0, 0, 255, .2);
+}
+
+.overlay {
+  background-color: rgba(0,0,0,0.3);
+  /* 모두 채워지지 않으면 vh로 바꾸기  */
+  width:100%;
+  height:100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+/* animation 모음 */
+
+@keyframes slideright{
+  from {
+    transform: translateX(-60px);
+    /* opacity: 0 */
+  }
+
+  to {
+    transform : translateX(0);
+    /* opacity: 1; */
+  }
+}
+
+@keyframes slideon {
+  from {
+    transform: translateY(60px);
+    opacity: 0
+  }
+
+  to {
+    transform : translateY(0);
+    opacity: 1;
+  }}
+@keyframes appear {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1;
+  }}
+
+  .slideright{
+    animation-name: slideright;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .appear {
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-fill-mode: both
+  }
