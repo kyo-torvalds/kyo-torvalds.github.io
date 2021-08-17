@@ -1,18 +1,43 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<nav id='sidebar'>
-	{% include nav.html %}
-</nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Wave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
 
-<section id='content'>
-{% for post in site.posts %}
-  <article class='{{ post.type }}'>
-    <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.url_path }}</code> {% endif %}{{ post.title }}</h2></a>
-    <section class='body'>
-      {{ post.content }}
-    </section>
-  </article>
-{% endfor %}
-</section>
+<body>
+    <div class="picture">
+        <canvas>
+        </canvas>
+
+        <div class="in_canvas">
+
+            <head>
+                <nav>
+                    <h1 class="title">KYO.DEV</h1>
+                    </span>
+                </nav>
+            </head>
+        </div>
+        <div class="wrapper">
+            <div class="hamburger-menu-button" ">
+                <div class=" hamburger-menu" />
+        </div>
+    </div>
+    </div>
+    <script type="module" src="app.js"></script>
+    <script src=modal.js></script>
+    <audio preload="auto" autoplay
+        src="https://api.soundcloud.com/tracks/129373865/stream?client_id=cmSmzlorE2Sydh0SPDX285qwjVf9bQxJ"></audio>
+
+
+</body>
+
+</html>
