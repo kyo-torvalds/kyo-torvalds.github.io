@@ -7,10 +7,10 @@ const overlay = document.querySelector(".overlay")
 hamburgerMenuBtn.addEventListener("click", () => { toggleMenu() })
 
 const toggleMenu = () => {
-    console.log("hi")
+    setTimeout(() => { navigator.classList.toggle("none") }, 100);
     hamburgerMenu.classList.toggle("open")
-    navigator.classList.toggle("appear")
-    navigator.classList.toggle("none")
+    navigator.classList.toggle("slideleft")
+    navigator.classList.toggle("slideright")
     overlay.classList.toggle('appear')
     overlay.classList.toggle('none')
 }

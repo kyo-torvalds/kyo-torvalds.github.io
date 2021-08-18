@@ -47,11 +47,6 @@ canvas {
   align-items: center;
 }
 
-/* display none  */
-.none {
-  display: none;
-}
-
 .modal_menu {
   position: absolute;
   right: 0.5em;
@@ -196,7 +191,7 @@ canvas {
 .nav_item a {
   color: var(--text_color);
 }
-.main_nav .nav_item {
+.text_slide {
   animation-name: slideright;
   animation-duration: 0.3s;
   animation-fill-mode: both;
@@ -219,10 +214,7 @@ canvas {
   opacity: 1;
   width: 100%;
 }
-.main_nav .nav_item a {
-  /* animation-name: color_change;
-  animation-duration: 0.6s; */
-}
+
 .main_nav .nav_item:nth-child(2) {
   animation-delay: 0.04s;
 }
@@ -277,19 +269,29 @@ canvas {
 @keyframes slideright {
   0% {
     opacity: 0;
-    transform: translateX(-40px);
-    /* opacity: 0 */
+    display: none;
+    transform: translateX(-200px);
   }
   100% {
     transform: translateX(0);
+    display: none;
     opacity: 1;
-    /* opacity: 1; */
+  }
+}
+
+@keyframes slideleft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400px);
   }
 }
 
 @keyframes slideon {
   from {
-    transform: translateY(60px);
+    transform: translateY(-60px);
     opacity: 0;
   }
 
@@ -329,7 +331,13 @@ canvas {
 
 .slideright {
   animation-name: slideright;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+}
+
+.slideleft {
+  animation-name: slideleft;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -337,4 +345,8 @@ canvas {
   animation-name: appear;
   animation-duration: 0.3s;
   animation-fill-mode: both;
+}
+/* display none  */
+.none {
+  display: none;
 }
