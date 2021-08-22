@@ -121,7 +121,7 @@ a { text-decoration: none; }
 
 .blog-article { width: 100%; max-width: 686px; }
 
-#markdown-toc { list-style: none; position: absolute; right: 0; }
+#markdown-toc { list-style: none; position: -webkit-sticky; position: sticky; top: 20px; right: 100px; }
 
 .content-toc-container { display: flex; width: 100%; position: relative; }
 

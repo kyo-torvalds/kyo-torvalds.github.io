@@ -12,6 +12,7 @@ gem "jekyll_asset_pipeline"
 gem 'wdm'
 gem 'rouge', '~> 3.26'
 gem 'kramdown'
+gem 'jekyll-toc'
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
