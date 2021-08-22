@@ -1,38 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-08-22T07:00:22-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><entry><title type="html">Makingfilm</title><link href="http://0.0.0.0:4000/2021/08/22/makingfilm.html" rel="alternate" type="text/html" title="Makingfilm" /><published>2021-08-22T00:00:00-05:00</published><updated>2021-08-22T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/08/22/makingfilm</id><content type="html" xml:base="http://0.0.0.0:4000/2021/08/22/makingfilm.html">&lt;p&gt;블로그의 폰트는 pretendard&lt;/p&gt;</content><author><name>jason</name></author><summary type="html">블로그의 폰트는 pretendard</summary></entry><entry><title type="html">블로그 스타일 소개</title><link href="http://0.0.0.0:4000/2021/08/14/makingBlog.html" rel="alternate" type="text/html" title="블로그 스타일 소개" /><published>2021-08-14T00:00:00-05:00</published><updated>2021-08-14T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/08/14/makingBlog</id><content type="html" xml:base="http://0.0.0.0:4000/2021/08/14/makingBlog.html">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#나만의-블로그-만들기&quot; id=&quot;markdown-toc-나만의-블로그-만들기&quot;&gt;나만의 블로그 만들기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#home-만들기&quot; id=&quot;markdown-toc-home-만들기&quot;&gt;Home 만들기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#h2-입니다&quot; id=&quot;markdown-toc-h2-입니다&quot;&gt;h2 입니다.&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#h3입니다&quot; id=&quot;markdown-toc-h3입니다&quot;&gt;h3입니다.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#아-왜-안됨&quot; id=&quot;markdown-toc-아-왜-안됨&quot;&gt;아 왜 안됨?&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2021-08-22T12:00:01-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><entry><title type="html">Makingfilm</title><link href="http://0.0.0.0:4000/2021/08/22/makingfilm.html" rel="alternate" type="text/html" title="Makingfilm" /><published>2021-08-22T00:00:00-05:00</published><updated>2021-08-22T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/08/22/makingfilm</id><content type="html" xml:base="http://0.0.0.0:4000/2021/08/22/makingfilm.html">&lt;p&gt;블로그의 폰트는 pretendard&lt;/p&gt;</content><author><name>jason</name></author><summary type="html">블로그의 폰트는 pretendard</summary></entry><entry><title type="html">블로그 제작 회고록</title><link href="http://0.0.0.0:4000/2021/08/14/makingBlog.html" rel="alternate" type="text/html" title="블로그 제작 회고록" /><published>2021-08-14T00:00:00-05:00</published><updated>2021-08-14T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2021/08/14/makingBlog</id><content type="html" xml:base="http://0.0.0.0:4000/2021/08/14/makingBlog.html">&lt;h2 id=&quot;나만의-블로그-만들기&quot;&gt;나만의 블로그 만들기&lt;/h2&gt;
 
-&lt;h2 id=&quot;나만의-블로그-만들기&quot;&gt;나만의 블로그 만들기&lt;/h2&gt;
+&lt;p&gt;코딩을 시작한 뒤로 부쩍 블로그를 많이 보게되었다. 티스토리, 네이버 블로그 , 워드프레스 등등의 플랫폼이 있지만 가장 눈에 띈건 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.io&lt;/code&gt;였다.  하나하나  커스터마이징 할 수 있는 점이 매력적이었다. 언젠가는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.io&lt;/code&gt;를 만드려고 했는데 
+잠시 일을 쉬게 돼서 시간적 여유가 생겼다. 조금씩 블로그를 만들기 시작했고 여름방학이 끝날 때쯤, 블로그를 완성했다.&lt;/p&gt;
 
-&lt;p&gt;코딩을 시작한 뒤로 부쩍 블로그를 많이 보게되었다. 티스토리, 네이버 블로그 , 워드프레스 등등의 플랫폼이 있지만 가장 눈에 띈건 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.io&lt;/code&gt;였다.  하나하나  커스터마이징 할 수 있는 점이 매력적이었다. 항상 올해안에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.io&lt;/code&gt;를 만들어야지 싶었는데 2021년 여름방학이 끝날 때쯤 만들게 되었다.&lt;/p&gt;
+&lt;p&gt;나에겐 형이 한 명 있다. 형은 따끈따끈 신입 개발자다.(나는 아직 대학생..) 
+우리는 밤마다 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;typescript&lt;/code&gt;,&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker&lt;/code&gt;,&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt; 등등을 공부하고있다. 이 블로그에는 우리가 공부했던 것들을 정리할 예정이다. 우리가 함께 공부했던 지식은 Etc나 Devops에 올라갈 예정이다. 추가로 백앤드 개발자인 형은 Backend 목록에 업로드를 하고 나는 Frontend 목록에 업로드를 할 예정이다.&lt;/p&gt;
 
 &lt;h2 id=&quot;home-만들기&quot;&gt;Home 만들기&lt;/h2&gt;
-&lt;p&gt;Home부분에는 animation을 넣고 싶었다. interactive developer 김종민님과 Anzi님의 작품을 보고 영감을 받았다. 사실 영감을 받았다라기보다는 클론 수준이다.&lt;/p&gt;
+&lt;p&gt;Home에는 animation을 넣고 싶었다. 개인적으로 interactive design을 굉장히 좋아한다. 그래서 Home을 만들 때 interactive developer 김종민님과 Anzi님의 작품을 따라하려고 노력했다.&lt;/p&gt;
 
-&lt;p&gt;[interactive developer]{https://www.youtube.com/watch?v=LLfhY4eVwDY}
-https://lp.anzi.kr/?page=about 
-음악조차 간지난다;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=LLfhY4eVwDY&quot;&gt;interactive developer님의 작품&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;ㄴㄹㄴㄹ&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://lp.anzi.kr/?page=about&quot;&gt;anzi님의 작품&lt;/a&gt; : 음악조차 간지난다;&lt;/p&gt;
+
+&lt;h2 id=&quot;style-구성&quot;&gt;style 구성&lt;/h2&gt;
+&lt;p&gt;호불호 없고 깔끔한 디자인을 원했다. 모든 요소들이 다 중요하지만 폰트에 많은 신경을 썼다. 구글링을 해도 마음에 드는 폰트를 찾지 못했는데 우연히 디자이너 오픈 톡방에서 &lt;strong&gt;Pretendard&lt;/strong&gt; 라는 폰트를 보게 되었다. 이 폰트는 명작이다..!&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;codeBlock&lt;/code&gt;은 노션을 참고했다. 폰트는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Nanum Gothic Coding&lt;/code&gt;이다.&lt;/p&gt;
+
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;이건 코드 입니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;console.log(&quot;hi&quot;)&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;h2-입니다&quot;&gt;h2 입니다.&lt;/h2&gt;
-
-&lt;h3 id=&quot;h3입니다&quot;&gt;h3입니다.&lt;/h3&gt;
-
-&lt;h3 id=&quot;아-왜-안됨&quot;&gt;아 왜 안됨?&lt;/h3&gt;</content><author><name>kyoYoung</name></author><summary type="html">나만의 블로그 만들기 Home 만들기 h2 입니다. h3입니다. 아 왜 안됨? 나만의 블로그 만들기 코딩을 시작한 뒤로 부쩍 블로그를 많이 보게되었다. 티스토리, 네이버 블로그 , 워드프레스 등등의 플랫폼이 있지만 가장 눈에 띈건 github.io였다. 하나하나 커스터마이징 할 수 있는 점이 매력적이었다. 항상 올해안에 github.io를 만들어야지 싶었는데 2021년 여름방학이 끝날 때쯤 만들게 되었다. Home 만들기 Home부분에는 animation을 넣고 싶었다. interactive developer 김종민님과 Anzi님의 작품을 보고 영감을 받았다. 사실 영감을 받았다라기보다는 클론 수준이다. [interactive developer]{https://www.youtube.com/watch?v=LLfhY4eVwDY} https://lp.anzi.kr/?page=about 음악조차 간지난다; ㄴㄹㄴㄹ const a = 3; const b = 4; const c = a+b; 이건 코드 입니다. console.log(&quot;hi&quot;) h2 입니다. h3입니다. 아 왜 안됨?</summary></entry><entry><title type="html">Kiwifruit</title><link href="http://0.0.0.0:4000/2018/08/22/kiwifruit.html" rel="alternate" type="text/html" title="Kiwifruit" /><published>2018-08-22T00:00:00-05:00</published><updated>2018-08-22T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2018/08/22/kiwifruit</id><content type="html" xml:base="http://0.0.0.0:4000/2018/08/22/kiwifruit.html">&lt;p&gt;Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
+&lt;h3 id=&quot;h1태그&quot;&gt;h1태그&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;,&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;,&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;h3&amp;gt;&lt;/code&gt;와 같은 h태그들은 다홍색의 left-border를 가진다.&lt;/p&gt;</content><author><name>kyoYoung</name></author><summary type="html">나만의 블로그 만들기 코딩을 시작한 뒤로 부쩍 블로그를 많이 보게되었다. 티스토리, 네이버 블로그 , 워드프레스 등등의 플랫폼이 있지만 가장 눈에 띈건 github.io였다. 하나하나 커스터마이징 할 수 있는 점이 매력적이었다. 언젠가는 github.io를 만드려고 했는데 잠시 일을 쉬게 돼서 시간적 여유가 생겼다. 조금씩 블로그를 만들기 시작했고 여름방학이 끝날 때쯤, 블로그를 완성했다. 나에겐 형이 한 명 있다. 형은 따끈따끈 신입 개발자다.(나는 아직 대학생..) 우리는 밤마다 typescript,docker,git 등등을 공부하고있다. 이 블로그에는 우리가 공부했던 것들을 정리할 예정이다. 우리가 함께 공부했던 지식은 Etc나 Devops에 올라갈 예정이다. 추가로 백앤드 개발자인 형은 Backend 목록에 업로드를 하고 나는 Frontend 목록에 업로드를 할 예정이다. Home 만들기 Home에는 animation을 넣고 싶었다. 개인적으로 interactive design을 굉장히 좋아한다. 그래서 Home을 만들 때 interactive developer 김종민님과 Anzi님의 작품을 따라하려고 노력했다. interactive developer님의 작품 anzi님의 작품 : 음악조차 간지난다; style 구성 호불호 없고 깔끔한 디자인을 원했다. 모든 요소들이 다 중요하지만 폰트에 많은 신경을 썼다. 구글링을 해도 마음에 드는 폰트를 찾지 못했는데 우연히 디자이너 오픈 톡방에서 Pretendard 라는 폰트를 보게 되었다. 이 폰트는 명작이다..! codeBlock은 노션을 참고했다. 폰트는 Nanum Gothic Coding이다. const a = 3; const b = 4; const c = a+b; h1태그 &amp;lt;h1&amp;gt;,&amp;lt;h2&amp;gt;,&amp;lt;h3&amp;gt;와 같은 h태그들은 다홍색의 left-border를 가진다.</summary></entry><entry><title type="html">Kiwifruit</title><link href="http://0.0.0.0:4000/2018/08/22/kiwifruit.html" rel="alternate" type="text/html" title="Kiwifruit" /><published>2018-08-22T00:00:00-05:00</published><updated>2018-08-22T00:00:00-05:00</updated><id>http://0.0.0.0:4000/2018/08/22/kiwifruit</id><content type="html" xml:base="http://0.0.0.0:4000/2018/08/22/kiwifruit.html">&lt;p&gt;Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
 berry of several species of woody vines in the genus Actinidia.&lt;/p&gt;
 
 &lt;p&gt;The most common cultivar group of kiwifruit is oval, about the size of a large

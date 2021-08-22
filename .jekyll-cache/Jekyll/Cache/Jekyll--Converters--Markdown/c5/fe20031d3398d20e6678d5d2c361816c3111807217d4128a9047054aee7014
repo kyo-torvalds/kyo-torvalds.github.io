@@ -1,4 +1,4 @@
-I"�0<p>A banana is an edible fruit – botanically a berry – produced by several kinds
+I"j0<p>A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.
 <br /></p>
 
@@ -13,25 +13,17 @@ of large herbaceous flowering plants in the genus Musa.
 
 <p>잘 모르겠어요 …. 좀 알려주세요 …</p>
 
-<div class="language-css highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
   <span class="nl">transform</span><span class="p">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">2px</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre>
-  </div>
-</div>
+</code></pre></div></div>
 
 <p>sfds</p>
 
 <p><mark style="background-color: #24292e"><font color="white"> 회색 </font></mark></p>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>안녕하세요<span class="nt">&lt;/h1&gt;</span>
-</code></pre>
-  </div>
-</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>안녕하세요<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
 
 <p>고정 위치(fixed position) 지정 방식 <br />
 고정 위치(fixed position) 지정 방식은 뷰포트(viewport)를 기준으로 위치를 설정하는 방식입니다.</p>

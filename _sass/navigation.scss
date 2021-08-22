@@ -29,7 +29,7 @@ a{
 
 :root {
   --width: 36px;
-  --text_color: rgb(48, 40, 53);
+  --text_color: black;
   --background_color: #F5F6F9;
   --wave-yellow : rgb(254, 166, 30);
   --wave-red:rgba(255, 95, 95,0.4);
@@ -198,7 +198,7 @@ a{
 }
 
 .nav_item {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Pretendard", sans-serif;
   display: table;
 }
 
@@ -318,7 +318,7 @@ a{
 }
 
 .content-wrraper p{
-  margin-bottom: 2em;
+  margin-bottom: 1.2em;
 }
 
 .content-wrraper h3{
@@ -326,6 +326,7 @@ a{
   border-left: #cb4b16 solid 4px;
   padding-left: 16px ;
   margin-bottom: 1em;
+  margin-top: 1em;
   height: auto;
   overflow:hidden;
   line-height: 1.2;
@@ -335,13 +336,14 @@ a{
   border-left: #cb4b16 solid 4px;
   padding-left: 16px ;
   margin-bottom: 1em;
+  margin-top:1em;
   height: auto;
   overflow:hidden;
   line-height: 1.1;
 }
 
 .content-wrraper h1{
-  font-size: 2rem;
+  font-size: 3rem;
   border-left: rgb(239, 133, 141) solid 4px;
   padding-left: 16px ;
   margin-bottom: 1em;
@@ -363,44 +365,42 @@ a{
   flex-direction: column;
 
 }
-.post-title{
-  text-align: center;
-}
 .title-date-wrapper{
   max-width: 1024px;
   width: 100%;
   position: relative;
 }
 
-.post-date{
+.post-date {
   position: absolute;
   right: 0;
-
+  color: #4A4A4B;
   max-width: 1024px;
   font-size: 1.2rem;
-  color: black;
-  opacity: 0.7;
 }
 
 .post-title{
   margin-bottom: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
 }
-
 
 .blog-article{
   width: 100%;
   max-width:  686px;
 }
 
-
 #markdown-toc{
   list-style: none;
   position: -webkit-sticky;
   position: sticky;
   top: 20px;
-  right: 100px;
+  right: 150px;
 
+}
+
+#toc{
+  position:sticky;
+  top:100px;
 }
 
 .content-toc-container{
@@ -460,3 +460,12 @@ a{
   }
 }
 
+.flex{
+  display: flex;
+  align-items: baseline;
+}
+
+.author{
+  padding-left: 1rem;
+
+}
