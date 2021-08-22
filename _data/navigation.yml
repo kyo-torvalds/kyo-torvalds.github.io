@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: Front
+  link: /blog.html
+- name: Backend
+  link: /backend.html
+- name: DevOps
+  link: /devops.html
+- name: ETC.
+  link: /etc.html

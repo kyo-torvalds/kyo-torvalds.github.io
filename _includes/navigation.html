@@ -1,0 +1,22 @@
+
+</nav>
+<div class="wrapper">
+    <div class="hamburger-menu-button">
+        <div class="hamburger-menu"></div>
+    </div>
+</div>
+<div class="overlay none">
+    <nav class="none navigator slideleft">
+        <ul class="nav">
+            <ul class="main_nav">
+                {% for item in site.data.navigation %}
+                <li class="nav_item text_slide"><a href="{{ item.link }}">{{item.name}}</a></li>
+                {% endfor %}
+            </ul>
+            <ul class="sub_nav">
+                <li class="nav_item text_slide"><a>About</a></li>
+                <li class="nav_item text_slide"><a>Contact</a></li>
+            </ul>
+        </ul>
+    </nav>
+</div>

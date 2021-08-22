@@ -1,0 +1,13 @@
+---
+layout: list
+title: Frontend
+---
+
+<ul class="article-list">
+    {% for post in site.posts %}
+    <li class="article-item">
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<!--        <p>{{ post.excerpt }}</p>-->
+    </li>
+    {% endfor %}
+</ul>

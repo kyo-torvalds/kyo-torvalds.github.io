@@ -16,8 +16,3 @@ const toggleMenu = () => {
 }
 
 
-// // Thumbnail settings
-// if (CodePen.isThumbnail) {
-//     root.style.setProperty('--width', '150px');
-//     setInterval(toggleMenu, 1250);
-// }

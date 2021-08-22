@@ -1,0 +1,406 @@
+* {
+  //user-select: none;
+  outline: 0;
+  margin: 0;
+  //padding: 0;
+  //box-sizing: border-box;
+  -webkit-tap-highlight-color: white;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+
+}
+
+
+li {
+  //list-style: none;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+:root {
+  --width: 36px;
+  --text_color: rgb(48, 40, 53);
+  --background_color: #F5F6F9;
+  --wave-yellow : rgb(254, 166, 30);
+  --wave-red:rgba(255, 95, 95,0.4);
+  --wave-pink:rgba(216, 79, 147,0.4);
+  --wave-purple: rgba(94, 79, 144,0.4);
+  --wave-blue:rgba(0, 61, 92,0.4);
+}
+/* rgb(235, 231, 236); */
+.wrapper {
+  z-index: 10;
+  animation-name: slideright;
+  animation-duration: 1s;
+  position: fixed;
+  left: 25px;
+  top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu-button {
+  width: var(--width);
+  height: var(--width);
+  display: flex;
+  /* flex되어있기 때문에 다 가려진 것이3다 처음에  */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* background-color: aqua; */
+}
+
+.hamburger-menu,
+.hamburger-menu::after {
+  height: calc(0.125 * var(--width));
+  border-radius: calc(0.15 * var(--width));
+  background-color: rgb(48, 40, 53);
+  transition: all 0.25s ease-in-out;
+  /* all은 모든 속성에 대해 transition을 적용한다는 것이다.  */
+}
+
+.hamburger-menu {
+  width: calc(0.75 * var(--width));
+  transform: translateY(calc(-0.125 * var(--width)));
+}
+
+.hamburger-menu::after {
+  position: fixed;
+  width: calc(0.375 * var(--width));
+  transform: translateY(calc(0.25 * var(--width)));
+  content: "";
+  /* content는 필수임 */
+}
+
+.open {
+  height: 2px;
+  background-color: var(--text_color);
+  transform: translateY(0px) rotate(45deg);
+  /* open에도 transition이 적용된다. */
+  /* background-color: white; */
+}
+
+.open::after {
+  height: 2px;
+  background-color: var(--text_color);
+  width: calc(0.75 * var(--width));
+  transform: translateY(0px) rotate(90deg);
+  /* background-color: white; */
+}
+
+.navigator {
+  height: 100vh;
+  user-select: none;
+  background-color: var(--background_color);
+  max-width: 25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top-right-radius: 10px;
+  box-shadow: 12, var(--text_color);
+}
+
+
+.nav_item {
+  padding: 0;
+  margin-top: 30px;
+  transition: ease-in;
+}
+
+.nav {
+  /* margin-left: 100px; */
+  padding: 0;
+  padding-top: 100px;
+  font-size: 3rem;
+  justify-content: center;
+
+}
+
+.nav_item a {
+  width: 100%;
+  font-weight: 800;
+}
+
+.nav_item:hover {
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  /* 모두 채워지지 않으면 vh로 바꾸기  */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav_item a {
+  color: var(--text_color);
+}
+
+.text_slide {
+  animation-name: slideright;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+.nav_item :after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.05em;
+  width: 0px;
+  border-top: 1px solid var(--text_color);
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.nav_item :hover:after {
+  opacity: 1;
+  width: 100%;
+}
+
+@for $i from 2 through 6 {
+
+  .main_nav .nav_item:nth-child(#{$i}) {
+    animation-delay: ($i - 1) * 0.03 + s;
+  }
+}
+.main_nav{
+  padding: 0;
+}
+
+.sub_nav {
+  margin-top: 50px;
+  font-size: 2rem;
+  padding: 0;
+  padding-top: 50px;
+  position: relative;
+}
+.sub_nav .nav_item {
+  animation-name: slideright;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.nav_item {
+  font-family: "Montserrat", sans-serif;
+  display: table;
+}
+
+.nav_item :hover {
+  cursor: pointer;
+  animation: opacity_change 0.3s;
+  animation-fill-mode: both;
+}
+
+.sub_nav::after {
+  animation-name: slideright;
+  animation-duration: 0.3s;
+  animation-delay: 0.12s;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  background-color: rgb(199, 198, 198);
+  height: 1px;
+  content: "";
+}
+
+/* animation 모음 */
+
+@keyframes slideright {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideleft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes slideon {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes color_change {
+  from {
+    color: pink;
+  }
+  to {
+    color: azure;
+  }
+}
+
+@keyframes opacity_change {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slideright {
+  animation-name: slideright;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+}
+
+.slideleft {
+  animation-name: slideleft;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.appear {
+  animation-name: appear;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+/* display none  */
+.none {
+  display: none;
+}
+
+.content-wrraper{
+  max-width: 1024px;
+  margin:auto;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  font-family: "pretendard";
+  padding: 4em 2em 0 2em;
+
+}
+
+.content-wrraper p{
+  margin-bottom: 2em;
+}
+
+.content-wrraper h3{
+
+  border-left: #cb4b16 solid 4px;
+  padding-left: 16px ;
+  margin-bottom: 1em;
+  height: auto;
+  overflow:hidden;
+  line-height: 1.2;
+}
+
+.content-wrraper h2{
+  border-left: #cb4b16 solid 4px;
+  padding-left: 16px ;
+  margin-bottom: 1em;
+  height: auto;
+  overflow:hidden;
+  line-height: 1.1;
+}
+
+.content-wrraper h1{
+  font-size: 2rem;
+  border-left: rgb(239, 133, 141) solid 4px;
+  padding-left: 16px ;
+  margin-bottom: 1em;
+  height: auto;
+  overflow:hidden;
+  line-height: 1.1;
+}
+
+.content-wrraper strong{
+  color:var(--wave-yellow)
+}
+.page-info{
+  width: 100%;
+}
+
+
+.blog-article{
+  width: 100%;
+  max-width:  686px;
+}
+
+
+#markdown-toc{
+  list-style: none;
+  position: absolute;
+  right: 0;
+
+}
+
+.content-toc-container{
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.toc{
+  background-color: #008FD5;
+  width: 250px;
+  display: none;
+}
+
+
+@media (min-width: 1084px){
+
+  .toc {
+    display: block;
+  }
+
+  .blog-article{
+    padding-right: 5em;
+  }
+}
+
+@media (max-width: 360px){
+  .content-wrraper{
+    padding: 20px;
+  }
+
+  .nav_item{
+    font-size: 2rem;
+  }
+}
+

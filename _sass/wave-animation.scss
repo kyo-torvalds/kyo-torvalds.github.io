@@ -1,0 +1,346 @@
+* {
+  user-select: none;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:white;
+}
+li {
+  list-style: none;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.in_canvas {
+  z-index: 0;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.picture {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modal_menu {
+  position: fixed;
+  right: 0.5em;
+  top: 0;
+  width: 3em;
+  height: 3em;
+}
+
+.title {
+  z-index: 1;
+  font-size: 5rem;
+  font-family: "Press Start 2P", cursive;
+  color: rgb(48, 40, 53);
+  text-shadow: 4px 4px 4px #aaa;
+  animation-name: slideon;
+  animation-duration: 1s;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+:root {
+  --width: 36px;
+  --text_color: rgb(48, 40, 53);
+  --background_color: #F5F6F9;
+}
+/* rgb(235, 231, 236); */
+.wrapper {
+  z-index: 10;
+  animation-name: slideright;
+  animation-duration: 1s;
+  position: fixed;
+  left: 25px;
+  top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu-button {
+  width: var(--width);
+  height: var(--width);
+  display: flex;
+  /* flex되어있기 때문에 다 가려진 것이3다 처음에  */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* background-color: aqua; */
+}
+
+.hamburger-menu,
+.hamburger-menu::after {
+  height: calc(0.125 * var(--width));
+  border-radius: calc(0.15 * var(--width));
+  background-color: rgb(48, 40, 53);
+  transition: all 0.25s ease-in-out;
+  /* all은 모든 속성에 대해 transition을 적용한다는 것이다.  */
+}
+
+.hamburger-menu {
+  width: calc(0.75 * var(--width));
+  transform: translateY(calc(-0.125 * var(--width)));
+}
+
+.hamburger-menu::after {
+  position: fixed;
+  width: calc(0.375 * var(--width));
+  transform: translateY(calc(0.25 * var(--width)));
+  content: "";
+  /* content는 필수임 */
+}
+
+.open {
+  height: 2px;
+  background-color: var(--text_color);
+  transform: translateY(0px) rotate(45deg);
+  /* open에도 transition이 적용된다. */
+  /* background-color: white; */
+}
+
+.open::after {
+  height: 2px;
+  background-color: var(--text_color);
+  width: calc(0.75 * var(--width));
+  transform: translateY(0px) rotate(90deg);
+  /* background-color: white; */
+}
+
+.navigator {
+  height: 100vh;
+  z-index: 10;
+  background-color: var(--background_color);
+  max-width: 25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top-right-radius: 10px;
+  box-shadow: 12, var(--text_color);
+}
+
+.nav_item {
+  margin-top: 30px;
+  transition: ease-in;
+}
+
+.nav {
+  /* margin-left: 100px; */
+  padding-top: 100px;
+  font-size: 3rem;
+}
+
+.nav_item a {
+  width: 100%;
+  font-weight: 800;
+}
+
+.nav_item:hover {
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* 모두 채워지지 않으면 vh로 바꾸기  */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav_item a {
+  color: var(--text_color);
+}
+
+.text_slide {
+  animation-name: slideright;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+.nav_item :after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.05em;
+  width: 0px;
+  border-top: 1px solid var(--text_color);
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.nav_item :hover:after {
+  opacity: 1;
+  width: 100%;
+}
+
+
+
+@for $i from 2 through 6 {
+
+  .main_nav .nav_item:nth-child(#{$i}) {
+    animation-delay: ($i - 1) * 0.03 + s;
+  }
+}
+
+.sub_nav {
+  margin-top: 50px;
+  font-size: 2rem;
+  padding-top: 50px;
+  position: relative;
+}
+.sub_nav .nav_item {
+  animation-name: slideright;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.nav_item {
+  font-family: "Montserrat", sans-serif;
+  display: table;
+}
+
+.nav_item :hover {
+  cursor: pointer;
+  animation: opacity_change 0.3s;
+  animation-fill-mode: both;
+}
+
+.sub_nav::after {
+  animation-name: slideright;
+  animation-duration: 0.3s;
+  animation-delay: 0.12s;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  background-color: rgb(199, 198, 198);
+  height: 1px;
+  content: "";
+}
+
+/* animation 모음 */
+
+@keyframes slideright {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideleft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes slideon {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes color_change {
+  from {
+    color: pink;
+  }
+  to {
+    color: azure;
+  }
+}
+
+@keyframes opacity_change {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slideright {
+  animation-name: slideright;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+}
+
+.slideleft {
+  animation-name: slideleft;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.appear {
+  animation-name: appear;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+/* display none  */
+.none {
+  display: none;
+}

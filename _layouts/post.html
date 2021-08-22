@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section class="page-info">
+    <div class="title-date-wrapper">
+    <h1 class="post-title">
+    {{page.title}}
+    </h1>
+
+    <div class="post-date">
+    {{ page.date | date_to_string }}
+    </div>
+
+    {% assign author = site.authors | where: 'short_name', page.author | first %}
+    {% if author %}
+    - <a href="{{ author.url }}">{{ author.name }}</a>
+    {% endif %}
+    </div>
+</section>
+
+<main class="content-wrraper">
+<div class="content-toc-container">
+
+<section class="blog-article">
+    {{ content }}
+</section>
+
+    <aside class="toc">
+
+    </aside>
+</div>
+</main>
