@@ -12,10 +12,12 @@ gem "jekyll_asset_pipeline"
 gem 'wdm'
 gem 'rouge', '~> 3.26'
 gem 'kramdown'
-gem 'jekyll-toc'
 
+
+gem 'github-pages', group: :jekyll_plugins
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
+  gem 'jekyll-toc'
 end
