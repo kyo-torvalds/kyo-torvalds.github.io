@@ -33,5 +33,5 @@ plugins:
   - jekyll-seo-tag
   - jekyll-toc
 
-  url: youngkyo.github.io
-  baseurl: /_site
+url: youngkyo.github.io
+baseurl: /_site
