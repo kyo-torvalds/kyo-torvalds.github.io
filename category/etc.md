@@ -1,0 +1,4 @@
+---
+title: ETC.
+layout: blog
+---

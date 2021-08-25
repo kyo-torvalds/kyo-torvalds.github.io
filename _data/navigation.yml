@@ -1,10 +1,10 @@
 - name: Home
   link: /
-- name: Front
-  link: /blog.html
+- name: Frontend
+  link: /category/frontend.html
 - name: Backend
-  link: /backend.html
+  link: /category/backend.html
 - name: DevOps
-  link: /devops.html
+  link: /category/devops.html
 - name: ETC.
-  link: /etc.html
+  link: /category/etc.html

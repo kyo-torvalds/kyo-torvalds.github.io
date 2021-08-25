@@ -72,7 +72,7 @@ canvas { position: absolute; width: 100%; height: 100%; z-index: 0; }
 
 .sub_nav .nav_item { animation-name: slideright; animation-duration: 0.3s; animation-fill-mode: both; }
 
-.nav_item { font-family: "Montserrat", sans-serif; display: table; }
+.nav_item { font-family: "Pretendard", sans-serif; display: table; }
 
 .nav_item :hover { cursor: pointer; animation: opacity_change 0.3s; animation-fill-mode: both; }
 

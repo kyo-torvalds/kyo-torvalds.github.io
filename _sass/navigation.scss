@@ -6,14 +6,23 @@
   //box-sizing: border-box;
   -webkit-tap-highlight-color: white;
 }
-
+::-moz-selection {
+  background: var(--wave-blue);
+  color: #fff;
+}
+::selection {
+  background: var(--wave-blue);
+  color: #fff;
+}
 body {
   width: 100%;
   height: 100%;
   /* overflow: hidden; */
-
 }
 
+a:link { color: black; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}
 
 li {
   //list-style: none;
@@ -35,7 +44,8 @@ a{
   --wave-red:rgba(255, 95, 95,0.4);
   --wave-pink:rgba(216, 79, 147,0.4);
   --wave-purple: rgba(94, 79, 144,0.4);
-  --wave-blue:rgba(0, 61, 92,0.4);
+  --wave-blue: rgba(0, 13, 56, 0.78);
+  --content-gray:#EFF1F5;
 }
 /* rgb(235, 231, 236); */
 .wrapper {
@@ -285,6 +295,25 @@ a{
   }
 }
 
+
+.ripple {
+  position: absolute; /* The absolute position we mentioned earlier */
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  //background-color: rgba(255, 255, 255, 0.7);
+  background-color: var(--wave-blue)
+
+  /* absoulte상태에서 left, top , 등을 주지 않았기 때문에 아무것도 보이지 않고 무에서 시작해야하기 때문에 scale(0) 에서 시작해야한다.  */
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
 .slideright {
   animation-name: slideright;
   animation-duration: 0.2s;
@@ -308,12 +337,15 @@ a{
 }
 
 .content-wrraper{
-  max-width: 1024px;
+  width: 1100px;
   margin:auto;
   font-size: 1.3rem;
   line-height: 1.8;
   font-family: "pretendard";
-  padding: 4em 2em 0 2em;
+  padding: 4em 2em 10em 2em;
+  position: relative;
+  animation-name: slideon;
+  animation-duration: 0.4s;
 
 }
 
@@ -323,20 +355,23 @@ a{
 
 .content-wrraper h3{
 
-  border-left: #cb4b16 solid 4px;
+  border-left: var(--wave-blue) solid 4px;
   padding-left: 16px ;
   margin-bottom: 1em;
-  margin-top: 1em;
+  margin-top: 2em;
   height: auto;
   overflow:hidden;
   line-height: 1.2;
 }
-
+//처음 높이를 맞추기 위해서 처음 margin에 top 0을 준다.
+.content-wrraper h2:nth-child(1){
+  margin-top: 0;
+}
 .content-wrraper h2{
-  border-left: #cb4b16 solid 4px;
+  border-left: var(--wave-blue) solid 4px;
   padding-left: 16px ;
   margin-bottom: 1em;
-  margin-top:1em;
+  margin-top:2em;
   height: auto;
   overflow:hidden;
   line-height: 1.1;
@@ -344,7 +379,7 @@ a{
 
 .content-wrraper h1{
   font-size: 3rem;
-  border-left: rgb(239, 133, 141) solid 4px;
+  border-left: var(--wave-blue) solid 4px;
   padding-left: 16px ;
   margin-bottom: 1em;
   height: auto;
@@ -359,24 +394,27 @@ a{
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: #F5F6F9;
+  background-color:var(--content-gray);
   width: 100%;
   height: 200px;
   flex-direction: column;
 
 }
 .title-date-wrapper{
-  max-width: 1024px;
+  max-width: 1100px;
   width: 100%;
   position: relative;
+  animation-name: slideon;
+  animation-duration: 0.4s;
 }
 
 .post-date {
   position: absolute;
-  right: 0;
+  right: 10px;
+  top:100px;
   color: #4A4A4B;
-  max-width: 1024px;
-  font-size: 1.2rem;
+  max-width: 1100px;
+  font-size: 1rem;
 }
 
 .post-title{
@@ -386,67 +424,231 @@ a{
 
 .blog-article{
   width: 100%;
-  max-width:  686px;
-}
-
-#markdown-toc{
-  list-style: none;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 20px;
-  right: 150px;
+  //max-width:  686px;
+  max-width:  1100px;
 
 }
+.blog-article a{
+  position: relative;
+  transition:0.3s ease-in-out;
+  padding:0 3px 0 3px;
+}
 
+.blog-article a::after{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(254, 166, 70);
+  height: 15%;
+  content: "";
+  transition: 0.3s ease-in-out;
+  z-index: -1;
+}
+.blog-article a:hover{
+  text-decoration: none;
+  color: white;
+}
+.blog-article a:hover::after{
+  height: 100%;
+}
+//#markdown-toc{
+//  list-style: none;
+//  position: -webkit-sticky;
+//  position: sticky;
+//  top: 20px;
+//  right: 150px;
+//
+//}
+.flex-aside{
+display: flex;
+
+}
+
+.space{
+  flex-basis: 250px;
+  //background-color: #cb4b16;
+  flex-shrink: 2;
+
+}
+//table of content
+.toc-wrapper{
+  flex-basis: 250px;
+  max-width: 250px;
+flex-shrink: 2;
+}
+#toc a{
+  color: #999;
+  transition: 0.3s;
+}
+
+#toc a:hover{
+  color:black;
+}
 #toc{
-  position:sticky;
-  top:100px;
+  list-style-type: none;
+  padding: 0;
+}
+#toc li::marker{
+  content: "";
+  display: none;
 }
 
 .content-toc-container{
   display: flex;
   width: 100%;
-  position: relative;
 }
+
 .toc{
-  //background-color: #008FD5;
-  width: 250px;
+  animation-name: slideon;
+  animation-duration: 0.5s;
   display: none;
+  padding: 1em;
+  padding-right: 3em;
+  margin-top: 4em;
+  border-left: 1px #e5e5e5 solid;
+  //background-color: #008FD5;
+  position: sticky;
+  top:100px;
+  //width: 250px;
 }
+ .toc-h2{
+  font-size: 1rem;
+   margin-top: 0.5em;
+}
+
+ .toc-h3{
+   font-size: 0.9rem;
+   margin-top: 0.3em;
+ }
 
 //블로그 글 목록 그리드
-.article-list {
-  margin: auto;
+.article-list-info{
+  padding-bottom: 1em;
+  max-width: 1100px;
   width: 100%;
+  margin:0 auto 0 auto;
   display: flex;
-  padding: 0;
-  /* Put a card in the next row when previous cards take all width */
-  flex-wrap: wrap;
-  min-width: 400px;
-  margin-left: -8px;
-  margin-right: -8px;
+  align-items: baseline;
   justify-content: space-between;
 }
+.article-list-info-title{
+  font-size: 3.5rem;
+  padding-left: 3rem;
 
-.article-item {
-  background-color: #EFF1F5 ;
-  border-radius: 6px;
-  /* There will be 4 cards per row */
-  flex-basis: 40%;
+}
+.article-list-grid-item-preview{
+  color:#999;
+  margin-top: 1em;
+  transition:0.2s
+}
+.article-list-quantity{
+  padding-right: 1em;
+  color: #999;
+}
 
-  padding: 1rem;
-  list-style: none;
+.readmore {
+  margin-top: 1.5em;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: 0.2s;
+  //transition: 1s;
+}
+
+.readmore::after{
+  content:"->";
+  right: 0;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
 }
 
 
-@media (min-width: 1084px){
+.article-list-container{
+  background-color: var(--content-gray);
+  min-height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5em;
+  padding-bottom: 5em;
 
- .toc {
-   display: block;
+}
+
+
+.article-list{
+  //overflow: auto;
+  max-width: 1100px;
+  margin:0 auto 0 auto;
+  width: 100%;
+}
+.link{
+  width: 100%;
+  display: block;
+  height: 100%;
+
+
+}
+.link:hover{
+  cursor:pointer;
+}
+.article-list-grid {
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3em;
+  /* Put a card in the next row when previous cards take all width */
+}
+
+.article-list-grid-item {
+  transition: 0.2s;
+  min-height: 200px;
+  background-color: white;
+  border-radius: 8px;
+  /* There will be 4 cards per row */
+  flex-basis: 40%;
+  padding: 2rem;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+.article-list-title{
+  transition: 0.2s;
+}
+.link:hover .article-list-title{
+  color: var(--wave-blue)
+
+}
+.link:hover .article-list-grid-item-preview{
+  color: black;
+}
+.link:hover .readmore{
+  color: var(--wave-blue)
+
+}
+
+.link:hover .readmore::after{
+  opacity: 1;
+  color: var(--wave-blue)
+
+}
+.col-flex{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.link:hover .article-list-grid-item{
+  background-color: rgba(0, 0, 0, 0.07);
+}
+@media (min-width: 1584px){
+
+  .toc {
+   display: flex;
  }
 
   .blog-article{
-    padding-right: 5em;
+    //padding-right: 5em;
   }
 }
 
@@ -459,13 +661,24 @@ a{
     font-size: 2rem;
   }
 }
-
+.relative{
+  position: relative;
+}
 .flex{
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  padding-right: 2em;
+  padding-left: 2em;
 }
-
+.author a:link{
+  color:#999;
+}
 .author{
+  right: -25%;
+  bottom:0;
+  color: #999;
   padding-left: 1rem;
-
 }
+.author a:visited { color: #999; text-decoration: none;}

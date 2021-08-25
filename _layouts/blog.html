@@ -1,0 +1,33 @@
+---
+layout: list
+---
+
+<div class="article-list">
+
+    <ul class="article-list-grid">
+        {% assign category = page.category | default: page.title %}
+        {% for post in site.categories[category] %}
+
+        <li class="article-list-grid-item js-link-container">
+            <a class="link js-link" href="{{ post.url }}" >
+                <div class="col-flex">
+                    <div  class="article-title-preview">
+                        <h2 class="article-list-title">{{ post.title }}</h2>
+                        <p class="article-list-grid-item-preview">
+                            {{post.preview}}
+                        </p>
+                    </div>
+                    <div >
+                        <p class="readmore" >Read more</p>
+                    </div>
+                </div>
+            </a>
+            <!--        <p>{{ post.excerpt }}</p>-->
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<script src="/assets/js/ripple.js"></script>
+
+<!--{for post in site.categories[category] }-->
+<!--사이트의 각 페이지에는 내가 카테고리스라고라고 설정한 배열이 있는데 그 안해 지금 현재 글의 카테고리가 들어있는 것만 모은 집합을 말한다. -->

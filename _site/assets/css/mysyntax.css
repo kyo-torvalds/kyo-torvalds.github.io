@@ -3,6 +3,10 @@
 .highlight, .highlight .w {
   color: #586e75;
 }
+
+div.highlighter-rouge {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
 .language-plaintext{
   color:#EB5757;
   background-color: #F5F6F9;
@@ -10,12 +14,14 @@
   overflow: hidden;
   padding: 4px;
 }
+
 code{
   font-family: 'Nanum Gothic Coding', monospace;
 }
 .highlight{
   border-radius: 6px;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem 0.5rem 0.5rem;
   background-color:#F5F6F9 ;
 }
 .highlight .err {
