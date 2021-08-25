@@ -84,7 +84,7 @@ a { text-decoration: none; }
 @keyframes appear { from { opacity: 0; }
   to { opacity: 1; } }
 @keyframes color_change { from { color: pink; }
-  to { color: azure; } }
+  to { color: #000000; } }
 @keyframes opacity_change { from { opacity: 0.5; }
   to { opacity: 1; } }
 .ripple { position: absolute; /* The absolute position we mentioned earlier */ border-radius: 50%; transform: scale(0); animation: ripple 600ms linear; background-color: var(--wave-blue); }
@@ -137,17 +137,21 @@ a { text-decoration: none; }
 
 .toc-wrapper { flex-basis: 250px; max-width: 250px; flex-shrink: 2; }
 
-#toc a { color: #999; transition: 0.3s; }
+.toc { color: #999; transition: 0.3s; }
 
-#toc a:hover { color: black; }
+.toc ul { padding-top: 0.25em; }
 
-#toc { list-style-type: none; padding: 0; }
+.toc li { transition: 0.3s ease-in-out; padding-bottom: 0.25em; }
 
-#toc li::marker { content: ""; display: none; }
+.toc li::marker { content: ""; display: none; }
+
+.toc li:hover { color: black; cursor: pointer; }
+
+.active { color: #cb4b16; }
 
 .content-toc-container { display: flex; width: 100%; }
 
-.toc { animation-name: slideon; animation-duration: 0.5s; display: none; padding: 1em; padding-right: 3em; margin-top: 4em; border-left: 1px #e5e5e5 solid; position: sticky; top: 100px; }
+.toc { list-style-type: none; padding: 0; animation-name: slideon; animation-duration: 0.5s; display: none; padding: 1em; padding-right: 3em; margin-top: 4em; border-left: 1px #e5e5e5 solid; position: sticky; top: 100px; }
 
 .toc-h2 { font-size: 1rem; margin-top: 0.5em; }
 
@@ -191,7 +195,7 @@ a { text-decoration: none; }
 
 .link:hover .article-list-grid-item { background-color: rgba(0, 0, 0, 0.07); }
 
-@media (min-width: 1584px) { .toc { display: flex; } }
+@media (min-width: 1584px) { .toc { display: flex; flex-direction: column; } }
 @media (max-width: 360px) { .content-wrraper { padding: 20px; }
   .nav_item { font-size: 2rem; } }
 .relative { position: relative; }
