@@ -41,11 +41,10 @@ var TocController = /** @class */ (function () {
             var midHeight = window.scrollY + window.innerHeight / 2 - 150;
             var i;
             for (i = 0; i < _this.hTags.length; i++) {
-                if ((midHeight >
+                if ( i === _this.hTags.length - 1 || (midHeight >
                         _this.hTags[i].getBoundingClientRect().top + window.scrollY &&
                         midHeight <
-                        _this.hTags[i + 1].getBoundingClientRect().top + window.scrollY) ||
-                    i === _this.hTags.length - 1) {
+                        _this.hTags[i + 1].getBoundingClientRect().top + window.scrollY) ) {
                     var active = document.querySelector("#toc-" + _this.hTags[i].id);
                     active === null || active === void 0 ? void 0 : active.classList.add("active");
                     return;
