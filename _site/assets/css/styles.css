@@ -99,9 +99,9 @@ a { text-decoration: none; }
 /* display none  */
 .none { display: none; }
 
-.content-wrraper { max-width: 1100px; width: 100%; margin: auto; font-size: 1.3rem; line-height: 1.8; font-family: "pretendard"; padding: 4em 2em 10em 2em; position: relative; animation-name: slideon; animation-duration: 0.4s; }
+.content-wrraper { max-width: 1100px; width: 100%; margin: auto; font-size: 1.3rem; line-height: 1.8; font-family: "pretendard"; padding: 8em 2em 5em 2em; position: relative; animation-name: slideon; animation-duration: 0.4s; }
 
-.content-wrraper img { display: block; margin: 0px auto; max-width: 70%; border-radius: 6px; margin-bottom: 1.2em; box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px; }
+.content-wrraper img { display: block; margin: 0px auto; max-width: 70%; border-radius: 6px; margin-bottom: 0.3em; box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px; }
 
 .content-wrraper p { margin-bottom: 1.2em; }
 
@@ -185,11 +185,15 @@ a { text-decoration: none; }
 
 .article-list-title { transition: 0.2s; }
 
+.image-caption { display: block; text-align: center; font-size: 1rem; color: #999; }
+
 .link:hover .article-list-title { color: var(--wave-blue); }
 
 .link:hover .article-list-grid-item-preview { color: black; }
 
 .link:hover .readmore { color: var(--wave-blue); }
+
+.readmore:hover::after { opacity: 1; color: var(--wave-blue); }
 
 .link:hover .readmore::after { opacity: 1; color: var(--wave-blue); }
 
@@ -199,8 +203,13 @@ a { text-decoration: none; }
 
 .title-author { display: flex; align-items: flex-end; justify-content: center; position: relative; padding-right: 2em; padding-left: 2em; }
 
+.more-post { margin-top: 5em; font-size: 1.3rem; border-bottom: 1px solid #d7d7d7; }
+
 @media (min-width: 1584px) { .toc { display: flex; flex-direction: column; } }
-@media (max-width: 540px) { .content-wrraper { padding: 3em 1em 3em 1em; font-size: 1rem; }
+@media (max-width: 540px) { .image-caption { font-size: 0.7rem; }
+  .page-info { height: 150px; }
+  .toc-wrapper, .space { display: none; }
+  .content-wrraper { padding: 3em 1em 3em 1em; font-size: 1rem; }
   .title-author { flex-direction: column; align-items: center; word-wrap: normal; }
   .content-wrraper img { max-width: 100%; }
   .author { width: 100%; text-align: right; }
