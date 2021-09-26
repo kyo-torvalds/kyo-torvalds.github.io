@@ -29,12 +29,11 @@ highlighter: rouge
 
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-toc
 
-url: youngkyo0504.github.io
-domain: https://youngkyo0504.github.io
+url: "https://youngkyo0504.github.io"
+domain: "https://youngkyo0504.github.io"
 baseurl: /
 
 # Analytics
