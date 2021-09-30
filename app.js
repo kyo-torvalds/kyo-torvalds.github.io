@@ -49,4 +49,5 @@ window.onload = () => {
     new App();
 };
 
-console.log(LISTID)
+
+console.log(os.environ['LISTID'])
