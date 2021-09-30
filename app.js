@@ -48,3 +48,5 @@ class App {
 window.onload = () => {
     new App();
 };
+
+console.log(LISTID)
