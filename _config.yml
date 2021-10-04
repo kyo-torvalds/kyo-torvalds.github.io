@@ -13,6 +13,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      comments: true
   - scope:
       path: ""
     values:
@@ -26,6 +27,14 @@ highlighter: rouge
 # text highlighter로 rouge이용
 # 2016.02월 이후로 syntax highlighter는 rouge만 지원.
 # Pygments 사용불가.
+comments:
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname            : 'youngkyo0504' # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+  # https://developers.facebook.com/docs/plugins/comments
 
 plugins:
   - jekyll-feed

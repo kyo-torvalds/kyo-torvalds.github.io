@@ -3,6 +3,7 @@ author: KyoYoung
 title: 🧓 블로그 제작기
 categories: [ETC.]
 preview: 블로그를 만들 때 생각했던 것들..
+comments: true
 ---
 
 
