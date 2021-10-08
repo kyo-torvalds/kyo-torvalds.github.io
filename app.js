@@ -52,7 +52,7 @@ window.onload = () => {
 
 
 var myHeaders = new Headers();
-myHeaders.append("AccessToken", os.environ['STIBEE_API_KEY']);
+myHeaders.append("AccessToken", `${secrets.STIBEE_API_KEY}`);
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
@@ -78,4 +78,4 @@ fetch("https://api.stibee.com/v1/lists/137513/subscribers", requestOptions)
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 
-console.log(os.environ['LISTID'])
+console.log(`${secrets.LISTID }`)
