@@ -15,7 +15,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-
+    <meta name="robots" content="index,follow" />
+    {% if page.keywords %}<meta name="keywords" content="{{post.keywords}}"/>{% endif %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7J3KMMHSE7"></script>
     <script>
