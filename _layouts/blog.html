@@ -12,7 +12,12 @@ layout: list
             <a class="link js-link" href="{{ post.url }}" >
                 <div class="col-flex">
                     <div  class="article-title-preview">
-                        <h2 class="article-list-title">{{ post.title }}</h2>
+                        <h2 class="article-list-title">
+                            {% if post.emoji %}
+                            {{post.emoji}}
+                            {% endif %}
+                            {{ post.title }}
+                        </h2>
                         <div class="article-list-grid-item-preview">
                             {{post.preview}}
                         </div>

@@ -1,6 +1,7 @@
 ---
 author: KyoYoung
-title: 🧳 웹팩1) 모듈번들러와 테스크러너란?
+emoji : 🧳
+title:  웹팩1) 모듈번들러와 테스크러너란?
 categories: [Frontend]
 preview: 모듈번들러나 테스크러너는 왜 필요할까?
 comments: true

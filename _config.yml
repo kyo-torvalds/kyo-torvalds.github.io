@@ -41,8 +41,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-toc
 
-url: "https://youngkyo0504.github.io"
-domain: "https://youngkyo0504.github.io"
+url: "https://kyo-torvalds.github.io"
+domain: "https://kyo-torvalds.github.io"
 baseurl: /
 
 # Analytics

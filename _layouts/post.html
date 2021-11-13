@@ -7,7 +7,10 @@ layout: default
             <div class="relative">
 
     <h1 class="post-title">
-    {{page.title}}
+        {% if page.emoji %}
+        {{page.emoji}}
+        {% endif %}
+        {{page.title}}
     </h1>
             </div>
         <span class="author">{% assign author = site.authors | where: 'short_name', page.author | first %}

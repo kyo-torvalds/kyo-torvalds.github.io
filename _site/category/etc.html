@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETC.</title>
+    <title>
+        ETC.
+    </title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/mysyntax.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +17,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-
+    <meta name="robots" content="index,follow" />
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7J3KMMHSE7"></script>
     <script>
@@ -97,7 +100,12 @@
             <a class="link js-link" href="/etc2021/09/10/dns.html" >
                 <div class="col-flex">
                     <div  class="article-title-preview">
-                        <h2 class="article-list-title">🚥 DNS란 무엇일까</h2>
+                        <h2 class="article-list-title">
+                            
+                            🚥
+                            
+                            DNS란 무엇일까
+                        </h2>
                         <div class="article-list-grid-item-preview">
                             DNS의 동작원리를 알아보자.
                         </div>
@@ -111,59 +119,6 @@
 <p>인터넷은 세계적으로 연결된 컴퓨터 네트워크 통신망을 일컫는 말이다. 우리는 주로 무선 인터넷을 사용하기 때문에 체감하지 못하지만 
 세계는 해저 케이블로 연결되어있다.(대부분의 트래픽은 해저케이블에서 일어난다.) <a href="https://www.submarinecablemap.com/">해저 케이블 지도</a>를 보면 알 수 있다.</p>
 
-<p><img src="https://ifh.cc/g/FksPYl.jpg" alt="해저 케이블 지도" /> <em class="image-caption">해저 케이블 지도</em></p>
-
-<p>이렇게 물리적으로 연결되어 있기 때문에 먼 나라의 사이트에 접속하면 속도가 느리다. 이론상으로는 미국 사이트(서버가 미국에 있는)와 정보교환시 해저 케이블을 따라 미국에 도착하고 미국내의 통신을 통해 정보가 전달된다.    <br />
-여담으로 구글,유튜브,넷플릭스 등의 세계적인 기업들은 자사의 서버를 세계 곳곳에 두기 때문에 빠른 속도를 제공한다. 
-이제 인터넷 연결이 결국 물리적인 연결이라는 것을 알았다. <strong>그렇다면 구글의 서버가 물리적으로 어디에 있는지도 모르는데 어떻게 접속할까?</strong>
-답은 DNS에 있다.</p>
-
-<h2 id="dns">DNS</h2>
-<p>DNS를 알기 전에 IP를 먼저 알아야한다. 편지를 보내기 위해서 주소를 알아야하는 것과 같이 인터넷에서 정보를 보내고 받기 위해서 주소를 알아야한다.
-인터넷에서는 IP를 그 주소로 한다.</p>
-
-<p><img src="https://blog.kakaocdn.net/dn/btcSed/btqDx5RXuFq/8zbssyvLo2EnLhsv5J1VYk/img.png" alt="IP주소" /> <em class="image-caption">IP 주소</em></p>
-
-<p>윈도우를 사용하고 있다면 cmd창에서 <code class="language-plaintext highlighter-rouge">nslookup google.com</code> 명령어를 입력해보자.</p>
-
-<p><img src="https://ifh.cc/g/RiRnfQ.png" alt="nslookup" /> <em class="image-caption">nslookup google.com 결과</em></p>
-
-<p>non-authoritative answer에 나와있는 addresses가 구글의 IP 주소를 뜻한다. <code class="language-plaintext highlighter-rouge">172.217.175.46</code>을 주소창에 입력 후 접속하니 google 홈페이지가 나왔다.
-google에 접속하기 위해서 항상 google.com을 입력했지만 사실은 우리도 모르게 구글 서버의 IP로 접속을 했다. 이런 일을 가능하게 해주는 것이 <strong>DNS</strong>이다.</p>
-
-<h3 id="domain">Domain</h3>
-<p>IP는 숫자로 이루어져있기 때문에 사람들이 외우기도 힘들고 와닿지도 않는다. 이런 상황들을 도메인(google.com같은 것)으로 해결했다.
- DNS는 <code class="language-plaintext highlighter-rouge">Domain Name Server</code>의 약자이다. domain을 입력하면 IP주소를 반환해주는 역할을 한다. 즉 주소창에 google.com을 입력하면 <code class="language-plaintext highlighter-rouge">172.217.175.46</code>이 반환되서 실제로는 저 아이피 주소에 접속하게된다.
-이런 기술 때문에 구글의 IP주소를 몰라도 구글 홈페이지에 접속할 수 있다.</p>
-
-<p><img src="https://ifh.cc/g/rAyunA.png" alt="Domain" /> <em class="image-caption">도메인</em></p>
-
-<p>DNS의 동작 원리를 알아보기전에 Domain에 대한 이해가 필요하다. 그림을 보면 도메인 주소 뒤에 점이 있다. 이는 보통 생략되는데 점을 기준으로 도메인의 종류를 나눌 수 있다. 
-도메인은 root 도메인, top-level 도메인, second-level 도메인 , sub 도메인으로 나뉜다. 그리고 각각의 도메인을 관리해주는 서버가 존재한다. 이를 name server라고 한다.</p>
-
-<ul>
-  <li>root 도메인서버 : 제일 최상단에 있는 도메인으로서 top-level에 있는 도메인 서버들의 목록을 알고 있다.</li>
-  <li>top-level도메인 서버 : 우리에게 익숙한 .com, .net을 top-level 도메인이라고 한다. second-levle 도메인 서버의 목록을 알고있다.</li>
-  <li>second-level 도메인 서버 : naver, google 같은 고유의 이름이 second-level 도메인에 해당한다. 이 서버는 sub 도메인 서버와 그 IP를 알고 있다.</li>
-  <li>sub 도메인서버 : naver.com이 주인 도메인이라고 한다면 그 naver.com앞에 오는 단어는 sub domain이다. shopping.naver.com, finance.naver.com , www.naver.com (shopping, finance, www 모두 서브 도메인이고 실제 존재하는 사이트다. ) 이로써 한가지 메인 도메인에 여러개의 서브도메인을 생성해서 그 기능을 나눌 수 있다.</li>
-</ul>
-
-<h3 id="dns-동작-원리">DNS 동작 원리</h3>
-<p><img src="https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-lookup-diagram.png" alt="DNS 동작 원리" /> <em class="image-caption">DNS 동작 원리</em></p>
-
-<p>본격적으로 DNS 동작원리에 대해 알아보자. 앞서 살펴 보았던 여러가지 도메인 서버들이 DNS 동작원리에 관여한다. https://google.com에 접속하는 경우를 예로 들어보자. 
-브라우저는 우선 운영체제의 hosts파일을 찾아본다. 여기에 google.com이 있다면 그 아이피로 반환해준다. 
-hosts파일(그림에는 없다.)에는 우리가 매핑시킨 도메인 이름과 ip주소 쌍이 존재한다. 이 파일은 순전히 우리만의 것이어서 naver.com을 집 공유기 ip로 매핑하면 naver.com에 접속하려 할 때 공유기로 접속하게된다.</p>
-
-<p>두번째로 DNS 캐쉬에 우리가 찾는 도메인이 있는 지 확인한다. 도메인에 접속할 때마다 그 아이피 주소를 캐쉬에 저장한다. 캐쉬에 있다면 바로 IP를 반환한다. <code class="language-plaintext highlighter-rouge">ipconfig -displaydns</code> 명령어를 이용해 dns캐쉬를 볼 수 있다.</p>
-
-<p>DNS캐쉬에 정보가 없다면 DNS Rsolver(public DNS)를 확인한다. 인터넷 통신사는 도메인 검색에 사용할 dns resolver의 ip를 컴퓨터에 저장시킨다. 
-DNS Resolver도 자체 캐쉬를 가지고 있기 때문에 DNS 캐쉬에 정보가 존재하면 반환한다. 없다면 루트 네임 서버에 접속하려는 사이트의 IP주소를 물어본다.(resolver는 루트 네임 서버를 알고있다.)</p>
-
-<p>루트 네임 서버에는 top-level 도메인(.com ,.io같은 것) 서버의 ip를 가지고 있다. 루트네임서버는 해당하는 top-level 도메인의 ip를 dna-resolver에 전달하고 dna resolver는 top-level 도메인 서버에 second-level 도메인 서버 ip주소를 물어본다.(top level 도메인에는 second-level 도메인 서버 ip주소가 있다.)
-루트네임 때와 같이 second-levle 도메인 서버 ip를 받아오고 second-level 도메인에서 해당 url의 ip를 반환한다.(sub도메인을 포함한 url의 ip다. sub도메인도 second-level도메인에서 관리한다.)</p>
-
-<p>꼬리에 꼬리를 물어 www.naver.com, www.google.com 같이 웹페이지 주소의 서버 ip를 알게됐다.</p>
 </p>-->
         </li>
         
@@ -172,7 +127,12 @@ DNS Resolver도 자체 캐쉬를 가지고 있기 때문에 DNS 캐쉬에 정보
             <a class="link js-link" href="/etc2021/08/14/makingBlog.html" >
                 <div class="col-flex">
                     <div  class="article-title-preview">
-                        <h2 class="article-list-title">🧓 블로그 제작기</h2>
+                        <h2 class="article-list-title">
+                            
+                            🧓
+                            
+                            블로그 제작기
+                        </h2>
                         <div class="article-list-grid-item-preview">
                             블로그를 만들 때 생각했던 것들..
                         </div>
@@ -183,61 +143,6 @@ DNS Resolver도 자체 캐쉬를 가지고 있기 때문에 DNS 캐쉬에 정보
                 </div>
             </a>
             <!--        <p><h2 id="나만의-블로그-만들기">나만의 블로그 만들기</h2>
-
-<p>코딩을 시작한 뒤로 부쩍 블로그를 자주 보게 되었다. 티스토리, 네이버 블로그 , 워드프레스 등등의 플랫폼이 있지만 가장 눈에 띈건 <code class="language-plaintext highlighter-rouge">github.io</code>였다. 하나하나  커스터마이징 할 수 있는 점이 매력적이었다. 나중에 기회가 되면 <code class="language-plaintext highlighter-rouge">github io</code>를 만들어보고 싶었다. 
-그렇게 <code class="language-plaintext highlighter-rouge">github.io</code>도 이루지 못한 나의 수 많은 버킷리스트 중 하나가 될 예정이었다. 하지만 일을 잠시 쉬게 돼서 시간적 여유가 생겼다. 그래서 조금씩 블로그를 만들기 시작했고 여름방학이 끝날 때쯤, 블로그가 완성됐다.</p>
-
-<p>나에겐 형이 한 명 있다. 형은 따끈따끈 신입 개발자다.(나는 아직 대학생..) 
-우리는 밤마다 <code class="language-plaintext highlighter-rouge">typescript</code>,<code class="language-plaintext highlighter-rouge">docker</code>,<code class="language-plaintext highlighter-rouge">git</code> 등등을 공부하고있다. 이 블로그에는 우리가 공부했던 것들을 정리할 예정이다. 우리가 함께 공부했던 지식은 Etc나 Devops에 올라가고  백앤드 개발자인 형은 Backend 목록에, 나는 Frontend 목록에 글을 업로드 할 것이다. 그리고 이 글에서는 사용한 기술 스택과 전체적인 스타일을 설명할 것이다.</p>
-
-<h2 id="기술-스택">기술 스택</h2>
-<p><code class="language-plaintext highlighter-rouge">지킬</code>과 <code class="language-plaintext highlighter-rouge">도커</code>를 활용해서 제작했다. 처음 개발환경을 구성할 때부터 포기할 뻔 했다. 지킬을 다운로드 받고 실행했는데 계속 오류가 발생했다.
-그 오류를 해결하기 위해 여러번 검색해서 하나를 해결하면 몇 일 뒤에 다른 문제가 생겼다. 
-코딩을 그만두고 싶을 때가 여럿있는데 백이면 백 코딩을 시작하지도 않았는데 환경설정을 못 할 때였다. 
-그럴 때마다 아무것도 하기 싫어진다.
-잘 모르던 <code class="language-plaintext highlighter-rouge">도커</code>를 도입하기 싫었지만 선택지가 없었다.
-개발 환경 구축에 애를 먹는 사람이라면 도커를 꼭 사용해야한다. 말 그대로 신세계였다.</p>
-
-<p>우여곡절 끝에 지킬을 시작하게 되었다. 처음으로 유튜브를 보지않고 공식문서와 구글을 통해서만 기술을 공부했는데 튜토리얼이 친절하지는 않았다. 중간 중간 한참 막혀서 진행이 디뎠다. 어찌저찌 제작을 완료했는데 이번에는 깃허브 배포에서 막혔다. 
-지킬에는 toc(table of content)를 만들어주는 기능이 있다. 깃허브 페이지로 배포시 이 기능이 유효하지 않은 명령으로 인식됐다. 화가 났지만 침착하게 직접 만들기로 했다. 마침 좋은 이와 관련된 <a href="https://wbluke.tistory.com/21">블로그 글</a>이 있어서 이를 참고하고 타입스크립트를 이용해서 만들었다.(근데 나중에 알고보니 <a href="https://tscanlin.github.io/tocbot/">오픈소스 라이브러리</a>가 있었다.) 
-이렇게 문제점들을 하나하나 해결하다보니 블로그가 완성되었다. 아래는 toc 사진이다.</p>
-
-<p><img src="https://ifh.cc/g/48nOZL.png" alt="toc 사진" title="toc" /><em class="image-caption">toc</em></p>
-
-<h2 id="전체적-디자인-구성">전체적 디자인 구성</h2>
-<p>호불호 없고 깔끔한 디자인을 원했다. 그래야 한 두달 뒤에 봐도 질리지 않을 것이라 생각했다. 평소에 웹서핑을 하면서 눈여겨봤던 디자인들을 가져와서 코드로 작성했다. 모든 요소들이 다 중요하지만 폰트선정에 많은 신경을 썼다. 구글링을 해도 마음에 드는 폰트를 찾지 못했는데 우연히 디자이너 오픈 톡방에서 <strong>Pretendard</strong> 라는 폰트를 보게 됐다. 이 폰트는 명작이다..!</p>
-
-<h3 id="블로그의-대문-home">블로그의 대문, Home</h3>
-<p>Home에는 애니메이션을 넣고 싶었다. 개인적으로 interactive design을 굉장히 좋아해서 Home을 만들 때 interactive developer 김종민님과 Anzi님의 작업을 따라하려고 노력했다.</p>
-
-<p><a href="https://www.youtube.com/watch?v=LLfhY4eVwDY">interactive developer님의 작품</a></p>
-
-<p><a href="https://lp.anzi.kr/?page=about">anzi님의 작품</a> : 이 음악들을 들으면서 작업했다.</p>
-
-<h3 id="h태그">h태그</h3>
-<p><code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code>,<code class="language-plaintext highlighter-rouge">&lt;h2&gt;</code>,<code class="language-plaintext highlighter-rouge">&lt;h3&gt;</code>와 같은 h태그들은 남색의 left-border를 가진다.</p>
-
-<h3 id="사진-삽입">사진 삽입</h3>
-<p><img src="https://ifh.cc/g/SGdYD6.jpg" alt="예시 사진" title="아마 속초입니다?" /><em class="image-caption">아마 속초 바다입니다.</em></p>
-
-<p>사진에 둥근 모양을 줬고 그림자를 조금 설정했다. 그리고 네이버 블로그나 티스토리 블로그 같이 약간의 마크다운 트릭을 줘서 이미지 캡션을 만들었다.</p>
-
-<h3 id="코드블럭">코드블럭</h3>
-
-<p><code class="language-plaintext highlighter-rouge">codeBlock</code>은 노션을 참고했다. 폰트는 <code class="language-plaintext highlighter-rouge">Nanum Gothic Coding</code>이다. 코드블럭의 원들은 <a href="https://carbon.now.sh/">carbon</a>을 모방한 것이다. javascript로 code부분에 svg를 삽입했다.</p>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h2 id="쓰고-보니-별거-없다">쓰고 보니 별거 없다.</h2>
-<p>사실 지킬을 이용한 깃헙블로그에서는 <code class="language-plaintext highlighter-rouge">javascript</code>가 거의 필요하지 않는다. 몇가지 인터렉티브 요소를 추가하기 위해서 js를 사용했고 대부분 작업은 css작업이었다.( 이 작은 블로그에도 css가 700줄 정도된다.) 
-그래도 만드는 과정에 css의 세부적인 사항을 잘 알 수 있었다.</p>
-
-<p>밑바닥부터 직접 만드니까 애정이 샘솟는다. 이제 블로그에 글을 자주 올리지 않을까 싶다. 그런데 문제가 생겼다. 이 글을 쓰기까지 5일이나 걸렸다. 게을러서 그런 것은 아니고 마음에 안들면 남에게 잘 보여주지 못하는 성격때문이다. 이 글도 갑자기 사라질 수 있다. 모순적이게도 완벽주의자는 아니다.
- 이런 이상한 성격을 고치기 위해서라도 무조건 한달에 한번은 글을 쓰려고 한다.</p>
 
 </p>-->
         </li>
