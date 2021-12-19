@@ -1,6 +1,4 @@
-User-agent: Yeti
-Allow:/
 User-agent: *
-Allow:/
+Allow: /
 
-Sitemap:https://youngkyo0504.github.io/sitemap.xml
+Sitemap: https://moon9342.github.io/sitemap.xml
